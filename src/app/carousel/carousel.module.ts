@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CarouselComponent } from './carousel.component';  // Adjust the path accordingly
+import { CarouselComponent } from './carousel.component';  
 
 @NgModule({
   declarations: [

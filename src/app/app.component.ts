@@ -1,4 +1,3 @@
-// app.component.ts
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,11 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ecomm-project';
- 
-  constructor() {}
-}
-
-interface Slide {
-  imgSrc: string;
-  imgAlt: string;
 }

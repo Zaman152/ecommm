@@ -1,7 +1,7 @@
 <nav class="nav">
-  <h1><a routerLink="">E-Commerce</a> </h1>
+  <h1><a routerLink="">E-Comm</a> </h1>
   <div *ngIf="menuType!=='seller'" class="nav-search">
-    <!-- <input type="text"
+    <input type="text"
     #searchInput
     (keyup)="searchProduct($event)" (blur)="hideSearch()" placeholder="Search Products" />
     <button (click)="submitSearch(searchInput.value)" >Search</button>
@@ -9,14 +9,14 @@
       <li *ngFor="let item of searchResult">
         <a (mousedown)="redirectToDetails(item.id)" >{{item.name}}</a>
       </li>
-    </ul> -->
+    </ul>
   </div>
  <div [ngSwitch]="menuType">
   <ul *ngSwitchCase="'default'" >
     <li><a routerLink="seller-auth">Seller</a></li>
     <li><a routerLink="">Home</a></li>
     <li><a routerLink="user-auth">Login/Sign-up</a></li>
-    <!-- <li><a href="#">Cart({{cartItems}})</a></li> -->
+    <li><a href="#">Cart({{cartItems}})</a></li>
   </ul>
   <ul *ngSwitchCase="'user'" >
     <li><a routerLink="seller-auth">Seller</a></li>
@@ -25,7 +25,7 @@
     <li><a routerLink="my-orders" >My Orders</a></li>
     <li><a (click)="userLogout()" >Logout</a></li>
 
-    <!-- <li><a [routerLink]="cartItems>0?'cart-page':null">Cart({{cartItems}})</a></li> -->
+    <li><a [routerLink]="cartItems>0?'/cart-page':null">Cart({{cartItems}})</a></li>
   </ul>
   <ul *ngSwitchCase="'seller'" >
     <li><a routerLink="seller-add-product">Add Product</a></li>
